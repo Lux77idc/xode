@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>XODE DIGITAL</title>
+    <script>
+      // GitHub Pages serves this page for any unknown path. Find the site root
+      // (domain root or /repo/) and reopen the app there with the path in ?__p=.
+      (function () {
+        var routes = ['projects', 'services', 'pricing', 'reviews', 'order', 'about', 'contact', 'privacy'];
+        var parts = location.pathname.split('/').filter(Boolean);
+        var onPages = /\.github\.io$/i.test(location.hostname);
+        var root = onPages && parts.length && routes.indexOf(parts[0]) === -1 ? '/' + parts.shift() + '/' : '/';
+        var q = location.search ? '&' + location.search.slice(1) : '';
+        location.replace(root + '?__p=' + encodeURIComponent(parts.join('/')) + q + location.hash);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

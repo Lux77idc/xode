@@ -1,0 +1,1 @@
+var e=`xode:demo:`,t={read(t,n){try{let r=localStorage.getItem(e+t);return r?JSON.parse(r):n}catch{return n}},write(t,n){try{localStorage.setItem(e+t,JSON.stringify(n))}catch{}}};function n(){try{Object.keys(localStorage).filter(t=>t.startsWith(e)).forEach(e=>localStorage.removeItem(e))}catch{}}var r=e=>new Promise(t=>setTimeout(t,e)),i=()=>!0;export{r as i,t as n,i as r,n as t};
